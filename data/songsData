@@ -1,0 +1,70 @@
+[
+  {
+    "title": "Shape of You",
+    "duration": "3:53",
+    "genre": "Pop",
+    "artist": {
+      "id": "artist1",
+      "name": "Ed Sheeran"
+    },
+    "album": {
+      "id": "album1",
+      "title": "Divide"
+    }
+  },
+  {
+    "title": "Blinding Lights",
+    "duration": "3:20",
+    "genre": "Synthwave",
+    "artist": {
+      "id": "artist2",
+      "name": "The Weeknd"
+    },
+    "album": {
+      "id": "album2",
+      "title": "After Hours"
+    }
+  },
+  {
+    "id": "song3",
+    "title": "Bohemian Rhapsody",
+    "duration": "5:55",
+    "genre": "Rock",
+    "artist": {
+      "id": "artist3",
+      "name": "Queen"
+    },
+    "album": {
+      "id": "album3",
+      "title": "A Night at the Opera"
+    }
+  },
+  {
+    "id": "song4",
+    "title": "Billie Jean",
+    "duration": "4:54",
+    "genre": "Pop",
+    "artist": {
+      "id": "artist4",
+      "name": "Michael Jackson"
+    },
+    "album": {
+      "id": "album4",
+      "title": "Thriller"
+    }
+  },
+  {
+    "id": "song5",
+    "title": "Smells Like Teen Spirit",
+    "duration": "5:01",
+    "genre": "Grunge",
+    "artist": {
+      "id": "artist5",
+      "name": "Nirvana"
+    },
+    "album": {
+      "id": "album5",
+      "title": "Nevermind"
+    }
+  }
+]

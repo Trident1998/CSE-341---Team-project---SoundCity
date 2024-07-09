@@ -1,0 +1,53 @@
+[
+  {
+    "title": "Chill Vibes",
+    "description": "A collection of relaxing and mellow tracks.",
+    "user": {
+      "id": "user1"
+    },
+    "songs": [
+      {
+        "id": "song1",
+        "title": "Shape of You"
+      },
+      {
+        "id": "song2",
+        "title": "Blinding Lights"
+      }
+    ]
+  },
+  {
+    "title": "Workout Mix",
+    "description": "High-energy songs to keep you motivated during workouts.",
+    "user": {
+      "id": "user2"
+    },
+    "songs": [
+      {
+        "id": "song5",
+        "title": "Smells Like Teen Spirit"
+      },
+      {
+        "id": "song4",
+        "title": "Billie Jean"
+      }
+    ]
+  },
+  {
+    "title": "Indie Hits",
+    "description": "A selection of the best indie tracks.",
+    "user": {
+      "id": "user3"
+    },
+    "songs": [
+      {
+        "id": "song3",
+        "title": "Bohemian Rhapsody"
+      },
+      {
+        "id": "song2",
+        "title": "Blinding Lights"
+      }
+    ]
+  }
+]

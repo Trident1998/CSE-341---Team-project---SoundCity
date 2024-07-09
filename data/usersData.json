@@ -1,0 +1,13 @@
+[
+  {
+    "firstname": "Dmytro",
+    "lastname": "Ivanytskyi",
+    "age": 25,
+    "email": "dima@example.com",
+    "password": "$2b$10$eR5s2X8Y7V9Z1O5QK1aXn2kX0R1X3b0H2F3G4H5I6J7K8L9M0N1P2",
+    "profile": {
+      "bio": "Music lover from Ukraine.",
+      "avatar": "https://example.com/avatars/dmytro_ivanytskyi.png"
+    }
+  }
+]

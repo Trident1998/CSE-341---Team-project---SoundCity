@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Ed Sheeran",
+    "bio": "Ed Sheeran is an English singer-songwriter known for his hit songs and acoustic performances.",
+    "genre": "Pop"
+  },
+  {
+    "name": "The Weeknd",
+    "bio": "The Weeknd is a Canadian singer, songwriter, and record producer known for his unique voice and hit singles.",
+    "genre": "R&B"
+  },
+  {
+    "name": "Queen",
+    "bio": "Queen is a British rock band formed in London in 1970, known for their eclectic style and influential music.",
+    "genre": "Rock"
+  },
+  {
+    "name": "Michael Jackson",
+    "bio": "Michael Jackson was an American singer, songwriter, and dancer, dubbed the 'King of Pop'.",
+    "genre": "Pop"
+  },
+  {
+    "name": "Nirvana",
+    "bio": "Nirvana was an American rock band formed in Aberdeen, Washington, in 1987, known for pioneering the grunge movement.",
+    "genre": "Grunge"
+  }
+]

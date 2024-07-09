@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Divide",
+    "release_date": "2017-03-03",
+    "artist": {
+      "id": "artist1",
+      "name": "Ed Sheeran"
+    }
+  },
+  {
+    "title": "After Hours",
+    "release_date": "2020-03-20",
+    "artist": {
+      "id": "artist2",
+      "name": "The Weeknd"
+    }
+  },
+  {
+    "title": "A Night at the Opera",
+    "release_date": "1975-11-21",
+    "artist": {
+      "id": "artist3",
+      "name": "Queen"
+    }
+  },
+  {
+    "title": "Thriller",
+    "release_date": "1982-11-30",
+    "artist": {
+      "id": "artist4",
+      "name": "Michael Jackson"
+    }
+  },
+  {
+    "title": "Nevermind",
+    "release_date": "1991-09-24",
+    "artist": {
+      "id": "artist5",
+      "name": "Nirvana"
+    }
+  }
+]
