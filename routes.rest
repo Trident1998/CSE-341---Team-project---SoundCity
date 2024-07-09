@@ -2,14 +2,14 @@
 ### Get all user records
 GET http://localhost:8080/users
 
-### Get all user records
+### Get all songs records
 GET http://localhost:8080/songs
 
-### Get all user records
+### Get all albums records
 GET http://localhost:8080/albums
 
-### Get all user records
+### Get all artists records
 GET http://localhost:8080/artists
 
-### Get all user records
+### Get all playlists records
 GET http://localhost:8080/playlists
