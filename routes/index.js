@@ -1,6 +1,6 @@
 const express = require('express');
-const passport = require('passport');
 const router = express.Router();
+const verifyToken = require('../middleware/authMiddleware');
 
 router.use('/', require('./swagger'));
 router.use('/books', require('./books'));
@@ -10,14 +10,8 @@ router.use('/albums', require('./albums'));
 router.use('/songs', require('./songs'));
 router.use('/playlists', require('./playlists'));
 
-router.get('/login', passport.authenticate('github'));
-router.get('/logout', function (req, res, next) {
-  req.logout(function (err) {
-    if (err) {
-      return next(err);
-    }
-    res.redirect('/');
-  });
+router.get('/', verifyToken, (req, res) => {
+  res.status(200).json({ message: 'Protected route accessed' });
 });
 
 module.exports = router;

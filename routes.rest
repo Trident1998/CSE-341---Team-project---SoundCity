@@ -1,4 +1,3 @@
-// LOCALHOST
 ### Get all user records
 GET http://localhost:8080/users
 
@@ -13,3 +12,30 @@ GET http://localhost:8080/artists
 
 ### Get all playlists records
 GET http://localhost:8080/playlists
+
+### Register a new user
+POST http://localhost:8080/users/register
+content-type: application/json
+
+{
+    "firstname": "Dmytro",
+    "lastname": "Ivanytskyi",
+    "age": 25,
+    "email": "dima2@example.com",
+    "password": "test",
+    "bio": "Music lover from Ukraine.",
+    "avatar": "https://example.com/avatars/dmytro_ivanytskyi.png"
+}
+
+### User login
+POST http://localhost:8080/users/login
+content-type: application/json
+
+{
+    "email": "dima2@example.com",
+    "password": "test"
+}
+
+### Get authenticated user's information
+GET http://localhost:8080/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjkyOTA0ZGE4YjI1M2E4YjhjYTQxOWQiLCJmaXJzdG5hbWUiOiJEbXl0cm8iLCJsYXN0bmFtZSI6Ikl2YW55dHNreWkiLCJhZ2UiOjI1LCJlbWFpbCI6ImRpbWEyQGV4YW1wbGUuY29tIiwiaWF0IjoxNzIwODgyNzQ3LCJleHAiOjE3MjA4ODYzNDd9.e-NL8LHRO4dsUF72CxEq1XebUt7gplY8Xc49XLu0vPg
