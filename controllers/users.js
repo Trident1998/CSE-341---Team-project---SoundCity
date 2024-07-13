@@ -79,7 +79,7 @@ const register = async (req, res, next) => {
     console.log(result);
     if (result.acknowledged) {
       console.log('User was registered with the ID', result.insertedId);
-      res.status(201).json({ bookId: result.insertedId }).send();
+      res.status(201).json({ userId: result.insertedId }).send();
     } else {
       next(createError(500, result.error || 'Registration failed'));
     }
