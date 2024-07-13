@@ -38,7 +38,7 @@ router.post(
 router.post(
   '/login',
   utilities.handleErrors(async (req, res, next) => {
-    await userController.register(req, res, next);
+    await userController.login(req, res, next);
   })
 );
 
