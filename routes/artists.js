@@ -7,28 +7,28 @@ const { artistValidationRules, validate } = require('../utilities/artist-validat
 
 router.get('/', utilities.handleErrors(artistsController.getAll));
 
-router.get('/:id', utilities.handleErrors(artistsController.getSingle));
+// router.get('/:id', utilities.handleErrors(artistsController.getSingle));
 
-router.post(
-  '/',
-  verifyToken,
-  artistValidationRules(),
-  validate,
-  utilities.handleErrors(async (req, res, next) => {
-    artistsController.createArtistRecord(req, res, next);
-  })
-);
+// router.post(
+//   '/',
+//   verifyToken,
+//   artistValidationRules(),
+//   validate,
+//   utilities.handleErrors(async (req, res, next) => {
+//     await artistsController.createArtistRecord(req, res, next);
+//   })
+// );
 
-router.put(
-  '/:id',
-  verifyToken,
-  artistValidationRules(),
-  validate,
-  utilities.handleErrors(async (req, res, next) => {
-    await artistsController.updateArtistRecord(req, res, next);
-  })
-);
+// router.put(
+//   '/:id',
+//   verifyToken,
+//   artistValidationRules(),
+//   validate,
+//   utilities.handleErrors(async (req, res, next) => {
+//     await artistsController.updateArtistRecord(req, res, next);
+//   })
+// );
 
-router.delete('/:id', verifyToken, utilities.handleErrors(artistsController.deleteArtistRecord));
+// router.delete('/:id', verifyToken, utilities.handleErrors(artistsController.deleteArtistRecord));
 
 module.exports = router;

@@ -41,11 +41,9 @@ const createArtistRecord = async (req, res, next) => {
 const updateArtistRecord = async (req, res, next) => {
   const artistId = new ObjectId(req.params.id);
   const artistRecord = {
-    title: req.body.title,
-    author: req.body.author,
-    publishedDate: req.body.publishedDate,
-    genre: req.body.genre,
-    country: req.body.country
+    name: req.body.name,
+    bio: req.body.bio,
+    genre: req.body.genre
   };
 
   const response = await getCollection(collectionName).replaceOne({ _id: artistId }, artistRecord);
@@ -54,7 +52,7 @@ const updateArtistRecord = async (req, res, next) => {
     res.status(204).send();
   } else {
     next(
-      createError(500, response.error || 'Some error occurred while creating the artist record.')
+      createError(500, response.error || 'Some error occurred while updating the artist record.')
     );
   }
 };
@@ -65,11 +63,10 @@ const deleteArtistRecord = async (req, res, next) => {
   const result = await getCollection(collectionName).deleteOne({ _id: artistId });
 
   console.log('result', result);
-  console.log(result);
   if (result.deletedCount > 0) {
     res.status(204).send();
   } else {
-    next(createError(500, result.error || 'Some error occurred while creating the artist record.'));
+    next(createError(500, result.error || 'Some error occurred while deleting the artist record.'));
   }
 };
 

@@ -10,7 +10,7 @@ router.use('/albums', require('./albums'));
 router.use('/songs', require('./songs'));
 router.use('/playlists', require('./playlists'));
 
-router.get('/', verifyToken, (req, res) => {
+router.get('/protected', verifyToken, (req, res) => {
   res.status(200).json({ message: 'Protected route accessed' });
 });
 
