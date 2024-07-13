@@ -1,4 +1,5 @@
 const { getCollection } = require('../utilities/index');
+const ObjectId = require('mongodb').ObjectId;
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const createError = require('http-errors');
@@ -10,6 +11,52 @@ const getAll = async (req, res) => {
     res.setHeader('Content-Type', 'application/json');
     res.status(200).json({ users: users, total: users.length });
   });
+};
+
+const getSingle = async (req, res, next) => {
+  const userId = new ObjectId(req.params.id);
+  const result = await getCollection(collectionName).findOne({ _id: userId });
+  if (!result) {
+    next(createError(404, 'User does not exist'));
+  } else {
+    res.setHeader('Content-Type', 'application/json').status(200).json(result);
+  }
+};
+
+const updateUserRecord = async (req, res, next) => {
+  const userId = new ObjectId(req.params.id);
+  const userRecord = {
+    firstname: req.body.firstname,
+    lastname: req.body.lastname,
+    age: req.body.age,
+    email: req.body.email,
+    password: req.body.password,
+    profile: {
+      bio: req.body.bio,
+      avatar: req.body.avatar
+    }
+  };
+
+  const response = await getCollection(collectionName).replaceOne({ _id: userId }, userRecord);
+
+  if (response.modifiedCount > 0) {
+    res.status(204).send();
+  } else {
+    next(createError(500, response.error || 'Some error occurred while updating the user record.'));
+  }
+};
+
+const deleteUserRecord = async (req, res, next) => {
+  const userId = new ObjectId(req.params.id);
+
+  const result = await getCollection(collectionName).deleteOne({ _id: userId });
+
+  console.log('result', result);
+  if (result.deletedCount > 0) {
+    res.status(204).send();
+  } else {
+    next(createError(500, result.error || 'Some error occurred while deleting the user record.'));
+  }
 };
 
 const register = async (req, res, next) => {
@@ -69,6 +116,9 @@ const login = async (req, res) => {
 
 module.exports = {
   getAll,
+  getSingle,
+  updateUserRecord,
+  deleteUserRecord,
   register,
   login
 };
