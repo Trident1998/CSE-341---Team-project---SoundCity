@@ -29,7 +29,17 @@ router.put(
 );
 
 router.delete('/:id', verifyToken, utilities.handleErrors(userController.deleteArtistRecord));
-router.post('/register', utilities.handleErrors(userController.register));
-router.post('/login', utilities.handleErrors(userController.login));
+router.post(
+  '/register',
+  utilities.handleErrors(async (req, res, next) => {
+    await userController.register(req, res, next);
+  })
+);
+router.post(
+  '/login',
+  utilities.handleErrors(async (req, res, next) => {
+    await userController.register(req, res, next);
+  })
+);
 
 module.exports = router;
