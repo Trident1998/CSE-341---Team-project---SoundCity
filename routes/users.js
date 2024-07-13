@@ -8,16 +8,6 @@ const userController = require('../controllers/users');
 router.get('/', utilities.handleErrors(userController.getAll));
 router.get('/:id', utilities.handleErrors(userController.getSingle));
 
-router.post(
-  '/',
-  verifyToken,
-  userValidationRules(),
-  validate,
-  utilities.handleErrors(async (req, res, next) => {
-    await userController.createArtistRecord(req, res, next);
-  })
-);
-
 router.put(
   '/:id',
   verifyToken,
