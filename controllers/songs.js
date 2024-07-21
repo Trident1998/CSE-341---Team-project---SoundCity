@@ -15,7 +15,7 @@ const getSingle = async (req, res, next) => {
   const songId = new ObjectId(req.params.id);
   const result = await getCollection(collectionName).findOne({ _id: songId });
   if (!result) {
-    next(createError(404, 'Songs does not exist'));
+    next(createError(404, 'Song does not exist'));
   } else {
     res.setHeader('Content-Type', 'application/json').status(200).json(result);
   }

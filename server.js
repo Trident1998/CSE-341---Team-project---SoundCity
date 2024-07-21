@@ -37,6 +37,10 @@ app.use((err, req, res, next) => {
   next();
 });
 
+app.get('/', (req, res) => {
+  res.status(200).send('Hello World!');
+});
+
 mongodb.initDb((err) => {
   if (err) {
     console.log(err);
