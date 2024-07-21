@@ -3,7 +3,6 @@ const router = express.Router();
 const { verifyToken } = require('../middleware/authMiddleware');
 
 router.use('/', require('./swagger'));
-router.use('/books', require('./books'));
 router.use('/users', require('./users'));
 router.use('/artists', require('./artists'));
 router.use('/albums', require('./albums'));

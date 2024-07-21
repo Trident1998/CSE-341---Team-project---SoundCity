@@ -10,6 +10,40 @@ GET http://localhost:8080/albums
 ### Get all artists records
 GET http://localhost:8080/artists
 
+--------------ALBUM ROUTS--------------
+
+### Get album recordby Id
+GET http://localhost:8080/albums/
+
+### Get album record by id
+GET http://localhost:8080/albums/668ce61ae0e394a2e0761319
+
+### PUT artists record by id
+PUT http://localhost:8080/artists/667fe6d19176da6150925860 HTTP/1.1
+content-type: application/json
+
+{
+    "title": "Divide",
+    "release_date": "2017-03-03",
+    "artist": {
+      "id": "668ce61ae0e394a2e0761319",
+      "name": "Ed Sheeran"
+    }
+  },
+
+### PUT album record by id
+PUT http://localhost:8080/albums/667fe6d19176da6150925860 HTTP/1.1
+content-type: application/json
+
+{
+  "name": "The Hardkiss Updated",
+  "bio": "Updated The Hardkiss is a Ukrainian progressive-pop band known for their eclectic music style and striking visual performances.",
+  "genre": "Progressive Pop Updated"
+}
+
+### DELETE album record
+DELETE http://localhost:8080/albums/667fe6d19176da6150925869 HTTP/1.1
+
 
 --------------ARTIST ROUTS--------------
 
@@ -19,17 +53,7 @@ GET http://localhost:8080/artists/
 ### Get artists record by id
 GET http://localhost:8080/artists/668ce61ae0e394a2e0761319
 
-### Create artists record
-POST http://localhost:8080/books HTTP/1.1
-content-type: application/json
-
- {
-  "name": "The Hardkiss",
-  "bio": "The Hardkiss is a Ukrainian progressive-pop band known for their eclectic music style and striking visual performances.",
-  "genre": "Progressive Pop"
-}
-
-### PUT book record
+### PUT artists record by id
 PUT http://localhost:8080/artists/667fe6d19176da6150925860 HTTP/1.1
 content-type: application/json
 
@@ -41,6 +65,10 @@ content-type: application/json
 
 ### DELETE book record
 DELETE http://localhost:8080/artists/667fe6d19176da6150925869 HTTP/1.1
+
+
+
+
 
 ### Get all playlists records
 GET http://localhost:8080/playlists
