@@ -23,10 +23,19 @@ const getSingle = async (req, res, next) => {
 
 const createSongsRecord = async (req, res, next) => {
   const artistRecord = {
-    name: req.body.name,
-    bio: req.body.bio,
-    genre: req.body.genre
+    title: req.body.title,
+    duration: req.body.duration,
+    genre: req.body.genre,
+    artist: {
+      id: req.body.artist_id,
+      name: req.body.artist_name
+    },
+    album: {
+      id: req.body.album_id,
+      title: req.body.album_name
+    }
   };
+
   const result = await getCollection(collectionName).insertOne(artistRecord);
 
   console.log(result);
@@ -41,9 +50,17 @@ const createSongsRecord = async (req, res, next) => {
 const updateSongsRecord = async (req, res, next) => {
   const songId = new ObjectId(req.params.id);
   const artistRecord = {
-    name: req.body.name,
-    bio: req.body.bio,
-    genre: req.body.genre
+    title: req.body.title,
+    duration: req.body.duration,
+    genre: req.body.genre,
+    artist: {
+      id: req.body.artist_id,
+      name: req.body.artist_name
+    },
+    album: {
+      id: req.body.album_id,
+      title: req.body.album_name
+    }
   };
 
   const response = await getCollection(collectionName).replaceOne({ _id: songId }, artistRecord);
