@@ -23,7 +23,6 @@
     "express-session": "^1.18.0",
     "express-validator": "^7.1.0",
     "http-errors": "^2.0.0",
-    "jest-mock": "^29.7.0",
     "jsonwebtoken": "^9.0.2",
     "mocha": "^10.7.0",
     "mongodb": "^4.17.2",
