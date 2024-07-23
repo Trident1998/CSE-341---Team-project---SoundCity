@@ -19,13 +19,7 @@ playlistValidator.playlistValidationRules = () => {
       .isLength({ min: 1 })
       .withMessage('Please provide a description'),
 
-    body('user_id')
-      .isString()
-      .trim()
-      .escape()
-      .notEmpty()
-      .isLength({ min: 24, max: 24 })
-      .withMessage('Please provide an user id'),
+    body('user_id').isString().trim().escape().notEmpty().withMessage('Please provide an user id'),
 
     body('songs').isArray().withMessage('Songs should be an array'),
 
@@ -34,7 +28,6 @@ playlistValidator.playlistValidationRules = () => {
       .trim()
       .escape()
       .notEmpty()
-      .isLength({ min: 24, max: 24 })
       .withMessage('Please provide an song id'),
 
     body('songs.*.title')

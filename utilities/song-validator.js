@@ -26,7 +26,6 @@ songValidator.songValidationRules = () => {
       .trim()
       .escape()
       .notEmpty()
-      .isLength({ min: 24, max: 24 })
       .withMessage('Please provide an artist id'),
 
     body('artist_name')
@@ -42,7 +41,6 @@ songValidator.songValidationRules = () => {
       .trim()
       .escape()
       .notEmpty()
-      .isLength({ min: 24, max: 24 })
       .withMessage('Please provide an album id'),
 
     body('album_name')

@@ -19,13 +19,7 @@ albumValidator.albumValidationRules = () => {
       .isDate({ format: 'yyyy-mm-dd' })
       .withMessage('Please provide a release_date'),
 
-    body('id')
-      .isString()
-      .trim()
-      .escape()
-      .notEmpty()
-      .isLength({ min: 24, max: 24 })
-      .withMessage('Please provide an artist id'),
+    body('id').isString().trim().escape().notEmpty().withMessage('Please provide an artist id'),
 
     body('name')
       .isString()
